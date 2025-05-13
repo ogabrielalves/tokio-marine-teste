@@ -41,4 +41,14 @@ public class TransferService {
 
         return ResponseEntity.ok(new ApiResponse<>(200, transfer));
     }
+
+    public ResponseEntity<ApiResponse<List<Transfer>>> listAllTransfers() {
+        List<Transfer> transfers = transferRepository.findAll();
+
+        if (transfers.isEmpty()) {
+            return ResponseEntity.ok(new ApiResponse<>(204, "No transfers found.", null));
+        }
+
+        return ResponseEntity.ok(new ApiResponse<>(200, transfers));
+    }
 }

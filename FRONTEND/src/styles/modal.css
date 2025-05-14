@@ -1,0 +1,92 @@
+/* src/styles/modal.css */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  width: 90%;
+  max-width: 500px;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  background-color: var(--white-color);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.modal-close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-light-color);
+  padding: 0.25rem 0.5rem;
+}
+
+.modal-close-button:hover {
+  color: var(--text-color);
+}
+
+.modal-body {
+  margin-top: 0.5rem;
+}
+
+.modal-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.fab-open-modal {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.15s ease-in-out;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 40;
+}
+
+.fab-open-modal:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.fab-open-modal .icon {
+  width: 24px;
+  height: 24px;
+}

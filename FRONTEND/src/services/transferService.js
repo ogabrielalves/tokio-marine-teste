@@ -8,7 +8,7 @@ export async function getTransfers() {
       return { status: response.status, message: "Erro ao buscar transferências", data: [] };
     }
     const data = await response.json();
-    if (data && typeof data.status === 'number' && typeof data.message === 'string' && Array.isArray(data.data)) {
+    if (data && data.status === 200 && typeof data.message === "OK") {
       return data;
     }
     console.error("Resposta da API inesperada:", data);
